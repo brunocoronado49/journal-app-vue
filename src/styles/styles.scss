@@ -1,12 +1,16 @@
 $theme-colors: (
-  "primary":    #18dcff,
-  "secondary":  #7efff5,
-  "success":    #32ff7e,
-  "info":       #7d5fff,
-  "warning":    #ffaf40,
-  "danger":     #ff4d4d,
+  "primary":    #2c3e50,
+  "secondary":  #7f8c8d,
+  "success":    #1abc9c,
+  "info":       #3498db,
+  "warning":    #e67e22,
+  "danger":     #e74c3c,
   "light":      #dfdfdf,
   "dark":       #4b4b4b,
 );
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+.pointer {
+  cursor: pointer;
+}
