@@ -32,6 +32,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+
 export default {
   components: {
     Fab: defineAsyncComponent(() => import(
