@@ -5,6 +5,21 @@ export default {
     '@/modules/daybook/layouts/DayBookLayout.vue'
   ),
   children: [
-    
+    {
+      path: '',
+      name: 'no-entry',
+      component: () => import(
+        /* webpaclChunkName: "daybook-no-entry" */
+        '../views/NoEntrySelected.vue'
+      ),
+    },
+    {
+      path: ':id',
+      name: 'entry',
+      component: () => import(
+        /* webpaclChunkName: "entry" */
+        '../views/EntryView.vue'
+      ),
+    }
   ],
 }
