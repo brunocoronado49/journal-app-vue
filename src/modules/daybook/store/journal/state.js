@@ -10,7 +10,7 @@ export default  () => ({
     {
       id: new Date().getTime() + 50,
       date: new Date().toDateString(),
-      text: 'Deserunt, sint facere aliquid culpa dicta hic voluptas rerum cupiditate doloremque dolorem voluptatem quisquam!',
+      text: 'Deserunt, sint facere aliquid culpa dicta hic voluptas rerum cupiditate doloremque dolorem voluptatem quisquam! Holaa',
       picture: null,
     },
     {

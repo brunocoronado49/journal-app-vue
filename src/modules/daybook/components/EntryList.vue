@@ -1,17 +1,23 @@
 <template>
   <div class="entry-list-container">
     <div class="px-2 pt-2">
-      <input type="text" class="form-control" placeholder="Search entry">
+      <input
+        type="text"
+        class="form-control"
+        v-model="term"
+        placeholder="Search entry">
     </div>
 
     <div class="entry-scrollarea">
-      <Entry v-for="item in  50" :key="item" />
+      <Entry v-for="item in entriesByTerm" :key="item" />
     </div>
   </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'EntryList',
   components: {
@@ -19,6 +25,17 @@ export default {
       /* webpackChunkName: "Entry" */
       './Entry.vue'
     )),
+  },
+  computed: {
+    ...mapGetters('journal', ['getEntriesByTerm']),
+    entriesByTerm() {
+      return this.getEntriesByTerm(this.term)
+    }
+  },
+  data() {
+    return {
+      term: ''
+    }
   }
 }
 </script>
